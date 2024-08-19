@@ -1,0 +1,136 @@
+/* General Styles for LoginSignup Component */
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1f2029;
+  overflow: hidden; /* Optional: Prevent scroll bars due to perspective */
+}
+
+/* Card Wrapper */
+.card-wrapper {
+  width: 100%;
+  max-width: 360px;
+  height: 500px;
+  perspective: 1000px;
+  position: relative;
+}
+
+/* Card Styles */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card.sign-up {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #2b2e38;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-style {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #1f2029;
+  color: #c4c3ca;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #ffeba7;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #ffeba7;
+}
+
+.link {
+  color: #ffeba7;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.link:hover {
+  color: #c4c3ca;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .card-wrapper {
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 15px;
+  }
+
+  .form-style {
+    padding: 12px;
+  }
+
+  .btn {
+    padding: 12px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
